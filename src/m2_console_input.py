@@ -30,7 +30,7 @@ def double_a_float():
          -6.28
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #   The testing code is already written for you (above).
     # ------------------------------------------------------------------
     x = float(input('Enter a float number:'))
@@ -63,9 +63,12 @@ def print_an_integer_many_times():
          10
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #   The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    x = int(input('Enter a positive integer:'))
+    for _ in range(x):
+        print(x*2)
 
 
 def print_an_integer_many_times_on_one_row():
@@ -82,12 +85,17 @@ def print_an_integer_many_times_on_one_row():
          1010101010
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # HINT: One way to print on a SINGLE line is to build up a string
     #       and then print that (single) string.
     # ------------------------------------------------------------------
+    s = ''
+    x = int(input('Enter a positive integer:'))
+    for k in range(x):
+        s = s + str(x*2)
+    print(s)
 
 
 def input_it_all():
@@ -122,10 +130,16 @@ def input_it_all():
          Peace & Love.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # done: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     # ------------------------------------------------------------------
-
+    x = float(input('Enter a positive float number:'))
+    y = int(input('Enter a positive integer:'))
+    z = input('Enter a string:')
+    for _ in range(y):
+        print(x**0.5)
+    for _ in range(y):
+        print(z)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
