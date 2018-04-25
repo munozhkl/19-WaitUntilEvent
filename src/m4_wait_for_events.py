@@ -24,8 +24,8 @@ The WHILE TRUE pattern:
 Ultimately you should be comfortable with both approaches.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Kathi Munoz.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -91,15 +91,22 @@ def sum_until_prime_input():
          The sum of the input integers is: 167
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #   The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    total = 0
+    while True:
+        x = int(input('Enter an integer that is at least 2: '))
+        total = total + x
+        if is_prime(x) is True:
+            break
+    print(total)
 
 
 def run_test_next_prime():
     """ Tests the   next_prime    function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # done: 3. Implement this TEST function.
     #   It TESTS the  wait_for_prime  function defined below.
     #   Include at least  ** 6 **  tests. (We supplied 5 tests for you.)
     #
@@ -163,7 +170,10 @@ def run_test_next_prime():
     # Test 6:
     print()
     print('TEST STARTED!  Has it ended?')
-
+    expected = 53
+    actual = next_prime(52)
+    print('Test 6 expected:', expected)
+    print('Test 6 actual:', actual)
     print('TEST ENDED!')
 
 
@@ -182,12 +192,19 @@ def next_prime(m):
       :type m: int
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
     #    -- Use (call) the   is_prime   function above appropriately.
     # ------------------------------------------------------------------
+    k = 0
+    while True:
+        x = m + k
+        if is_prime(x) is True:
+            break
+        k = k + 1
+    return x
 
 
 def run_test_prime_gap():
@@ -322,12 +339,14 @@ def prime_gap(m):
     #    -- Use (call) the   *** next_prime ***   function
     #       (that you implemented) appropriately.
     # ------------------------------------------------------------------
-
+    k = 0
+    while True:
+        
 
 def run_test_wait_for_sum_of_cubes():
     """ Tests the   wait_for_sum_of_cubes    function. """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # done: 6. Implement this TEST function.
     #   It TESTS the  wait_for_sum_of_cubes  function defined below.
     #   Include at least  ** 8 **  tests. (We supplied 6 tests for you.)
     #
@@ -403,7 +422,10 @@ def run_test_wait_for_sum_of_cubes():
     # Test 7:
     print()
     print('TEST STARTED!  Has it ended?')
-
+    expected = 3
+    actual = wait_for_sum_of_cubes(15)
+    print('Test 7 expected:', expected)
+    print('Test 7 actual:', actual)
     print('TEST ENDED!')
 
     # TO DO 6 (continued):
@@ -413,7 +435,10 @@ def run_test_wait_for_sum_of_cubes():
     # Test 8:
     print()
     print('TEST STARTED!  Has it ended?')
-
+    expected = 4
+    actual = wait_for_sum_of_cubes(42)
+    print('Test 8 expected:', expected)
+    print('Test 8 actual:', actual)
     print('TEST ENDED!')
 
 
