@@ -341,7 +341,7 @@ def prime_gap(m):
     # ------------------------------------------------------------------
     k = 0
     while True:
-        
+
 
 def run_test_wait_for_sum_of_cubes():
     """ Tests the   wait_for_sum_of_cubes    function. """
