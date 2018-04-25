@@ -332,7 +332,7 @@ def prime_gap(m):
       :type m: int
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # done: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -479,7 +479,7 @@ def wait_for_sum_of_cubes(x):
       :type x: float  [or an int]
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # done: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
@@ -489,6 +489,15 @@ def wait_for_sum_of_cubes(x):
     # (or look up) a formula that would allow a faster computation.
     # But no fair using that in this function.
     # ------------------------------------------------------------------
+    k = 1
+    sum = 0
+    while True:
+        sum = sum + (k ** 3)
+        if sum >= x:
+            break
+        k = k + 1
+
+    return k
 
 
 # ----------------------------------------------------------------------
